@@ -37,7 +37,7 @@ GO
 ALTER TABLE [Sales].[CountryRegionCurrency]
 	WITH CHECK
 	ADD CONSTRAINT [FK_CountryRegionCurrency_Currency_CurrencyCode]
-	FOREIGN KEY ([CurrencyCode]) REFERENCES [Sales].[Currency] ([CurrencyCode])
+	FOREIGN KEY ([CurrencyCode]) REFERENCES [Sales].[Currency.Renamed] ([CurrencyCode])
 ALTER TABLE [Sales].[CountryRegionCurrency]
 	CHECK CONSTRAINT [FK_CountryRegionCurrency_Currency_CurrencyCode]
 

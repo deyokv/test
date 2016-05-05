@@ -31,7 +31,7 @@ GO
 ALTER TABLE [Sales].[CurrencyRate]
 	WITH CHECK
 	ADD CONSTRAINT [FK_CurrencyRate_Currency_FromCurrencyCode]
-	FOREIGN KEY ([FromCurrencyCode]) REFERENCES [Sales].[Currency] ([CurrencyCode])
+	FOREIGN KEY ([FromCurrencyCode]) REFERENCES [Sales].[Currency.Renamed] ([CurrencyCode])
 ALTER TABLE [Sales].[CurrencyRate]
 	CHECK CONSTRAINT [FK_CurrencyRate_Currency_FromCurrencyCode]
 
@@ -41,7 +41,7 @@ GO
 ALTER TABLE [Sales].[CurrencyRate]
 	WITH CHECK
 	ADD CONSTRAINT [FK_CurrencyRate_Currency_ToCurrencyCode]
-	FOREIGN KEY ([ToCurrencyCode]) REFERENCES [Sales].[Currency] ([CurrencyCode])
+	FOREIGN KEY ([ToCurrencyCode]) REFERENCES [Sales].[Currency.Renamed] ([CurrencyCode])
 ALTER TABLE [Sales].[CurrencyRate]
 	CHECK CONSTRAINT [FK_CurrencyRate_Currency_ToCurrencyCode]
 
